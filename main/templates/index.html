@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, Django!</title>
+    <link rel="icon" href="{% static 'img/django_cover.webp' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Главная</a></li>
+                <li><a href="/admin">Админская панель</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="{% static 'img/django_cover.webp' %}" alt="Django">
+            <h1>Вассап! Я - Django!</h1>
+            <h2><i>А ты кто? Ты - {{ name }}!</i></h2>
+        </section>
+        
+        <section id="about">
+            <h2>Обо мне</h2>
+            <p>Бывший раб, ставший вольным стрелком. Ищу работу по специальности:</p>
+            <ul>
+                <li>Поиски сокровищ</li>
+                <li>Разборки с негодяями</li>
+                <li>Верховые погони</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 1899 Django Freeman. Все права защищены.</p>
+        <p>Ищите меня в салунах Нью-Остина и Вест-Элизабет. Всегда буду рад встрече!</p>
+    </footer>
+</body>
+</html>
