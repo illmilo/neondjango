@@ -16,7 +16,7 @@ This is a template repository for your Django project to deploy it on Vercel wit
 
 ## Usage
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qHZnufFz3Is?si=EE7t2drLQ2QkIORO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+https://www.youtube.com/embed/qHZnufFz3Is?si=EE7t2drLQ2QkIORO
 
 1. Use this repository as a template to create your new GitHub repository
 2. Clone this repository with `git clone https://github.com/illmilo/neondjango.git`

@@ -1,7 +1,15 @@
-ol {
+ol, ul {
     margin-left:5%;
 }
 
 .section-title a {
     color:aquamarine;
+}
+
+#readme-container img {
+    display: none;
+}
+
+iframe {
+    margin: 5% auto;
 }
