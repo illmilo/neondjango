@@ -29,7 +29,7 @@ This is a template repository for your Django project to deploy it on Vercel wit
 9. Replace `neondjango` with your project name in `STATICFILES_DIRS` variable
 10. Place **all the static files** inside `$rootApplicationFolder$/static`
 11. In `wsgi.py`, put `app = application` in the end of the file
-12. In `vercel.json`, 
+12. In `vercel.json`, replace `neondjango` with the name of your project
 13. `python manage.py migrate`
 14. `python manage.py createsuperuser` (if needed)
 15. `vercel`
