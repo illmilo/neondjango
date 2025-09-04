@@ -1,15 +1,15 @@
-import os
-from os import getenv
-from dotenv import load_dotenv
-
-load_dotenv()
-
 from pathlib import Path
+import os
 
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = getenv("SECRET_KEY")
+SECRET_KEY = 'django-insecure-iym8-4ct-2*776m6ruf%=33zw_sm2ljeqlv4i6lp)nop1@-!51'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if "VERCEL" in os.environ:
@@ -18,7 +18,6 @@ else:
     DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'localhost']
-
 
 # Application definition
 
@@ -42,7 +41,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'HelloDjango.urls'
+ROOT_URLCONF = 'neondjango.urls'
 
 TEMPLATES = [
     {
@@ -59,8 +58,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'HelloDjango.wsgi.app'
-
+WSGI_APPLICATION = 'neondjango.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
@@ -68,11 +66,11 @@ WSGI_APPLICATION = 'HelloDjango.wsgi.app'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': getenv('PGDATABASE'),
-        'USER': getenv('PGUSER'),
-        'PASSWORD': getenv('PGPASSWORD'),
-        'HOST': getenv('PGHOST'),
-        'PORT': getenv('PGPORT', 5432),
+        'NAME': os.getenv('PGDATABASE'),
+        'USER': os.getenv('PGUSER'),
+        'PASSWORD': os.getenv('PGPASSWORD'),
+        'HOST': os.getenv('PGHOST'),
+        'PORT': os.getenv('PGPORT'),
             'OPTIONS': {
                 'sslmode': 'require',
         }
@@ -115,7 +113,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / 'HelloDjango/static']
+STATICFILES_DIRS = [BASE_DIR / 'neondjango/static']
 STATIC_ROOT = BASE_DIR / 'staticfiles/static'
 
 # Default primary key field type
