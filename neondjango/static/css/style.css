@@ -1,5 +1,10 @@
-ol, ul {
+body {
+    scroll-behavior: smooth;
+}
+
+#readme-container ol, #readme-container ul {
     margin-left:5%;
+    margin-bottom: 20px;
 }
 
 .section-title a {
@@ -12,4 +17,37 @@ ol, ul {
 
 iframe {
     margin: 5% auto;
+}
+
+#readme-container h2 {
+    display: unset;
+}
+
+#tutorial-container {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+    overflow: hidden;
+}
+#tutorial-container iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 94%;
+    height: 84%;
+    border: 0;
+    border-radius: 25px;
+    box-shadow: 0 0 5px 5px rgba(45, 57, 101, 0.4);
+}
+
+@media screen and (max-width: 1000px) {
+    #tutorial-container iframe {
+        width:90%;
+    }
 }
