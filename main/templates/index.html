@@ -8,7 +8,7 @@
     <title>NeonDjango | Vercel</title>
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/illmilo/illmilo.github.io@master/src/css/style.css">    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/illmilo/illmilo.github.io@master/src/css/style.css">    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <div class="wrapper">
@@ -24,21 +24,21 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://illmilo.github.io" class="nav-button">
-                            <i class="fa-solid fa-globe"></i>
-                            <span class="text">My Site</span>
-                        </a>
-                    </li>
-                    <li>
                         <a href="#readme-container" class="nav-button">
-                            <i class="fa fa-list-ol"></i>
-                            <span class="text">Text Instruction</span>
+                            <i class="fa-solid fa-question"></i>
+                            <span class="text">About</span>
                         </a>
                     </li>
                     <li>
                         <a href="#tutorial-container" class="nav-button">
                             <i class="fa-brands fa-youtube"></i>
-                            <span class="text">Video Tutorial</span>
+                            <span class="text">Tutorial</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://illmilo.github.io" class="nav-button">
+                            <i class="fa-solid fa-globe"></i>
+                            <span class="text">My Site</span>
                         </a>
                     </li>
                 </ul>
@@ -55,9 +55,11 @@
         </section>
 
         <section>
-            <h2 class="section-title">YouTube Tutorial</h2>
+            <h2 class="section-title">Tutorial</h2>
             <div id="tutorial-container">
-                <iframe src="https://www.youtube.com/embed/qHZnufFz3Is?si=gbcF4qwanDRH1eGC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                {% for tutorial in tutorials %}
+                    <video src="{{ tutorial.video.url }}" controls></video>
+                {% endfor %}
             </div>
         </section>
     </div>

@@ -1,4 +1,9 @@
 from django.shortcuts import render
+from .models import Tutorial
 
 def index(request):
-    return render(request, 'index.html')
+    tutorials = Tutorial.objects.all()
+    context = {
+        'tutorials': tutorials
+    }
+    return render(request, 'index.html', context)
