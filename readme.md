@@ -1,13 +1,6 @@
-<img src="neondjango/static/img/django_icon.png" width=35px align=right>
-
 # NeonDjango
 
-## Demo
-https://neondjango.vercel.app
-
-## Description
-
-This is a template repository for your Django project to deploy it on Vercel with Neon DataBase integration.
+Template repository to deploy Django projects with PostgreSQL serverless (NeonDB) integration on Vercel.
 
 ## Requirements
 
